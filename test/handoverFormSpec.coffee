@@ -16,7 +16,11 @@ describe 'handover from journey', ->
         @room.user.say('bob', 'handover please!').then =>
             expect(@room.messages).to.eql [
                 ['bob', 'handover please!'],
-                ['hubot', 'alrighty-o handover initiating!!']
+                ['hubot', 'alrighty-o handover initiating!!'],
+                ['hubot', '']
+
             ]
+    it 'should, based on selected section, return the correct form', ->
+        @room.user.say('bob', 'Service handover details')
     
     

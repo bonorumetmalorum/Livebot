@@ -30,5 +30,8 @@
     "hubot-test-helper": "^1.9.0",
     "mocha": "^5.1.1",
     "should": "^13.2.1"
+  },
+  "scripts": {
+    "test": "mocha test/*.coffee"
   }
 }
