@@ -5,7 +5,6 @@
   "author": "venkateshgovind1@gmail.com",
   "description": "the best and most useful employee of DDCNLS",
   "dependencies": {
-    "@slack/interactive-messages": "^0.3.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "hubot": "^2.19.0",
