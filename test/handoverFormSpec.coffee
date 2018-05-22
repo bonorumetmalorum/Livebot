@@ -17,14 +17,24 @@ describe 'handover from journey', ->
             expect(@room.messages).to.eql [
                 ['bob', 'handover please!'],
                 ['hubot', 'alrighty-o handover initiating!!'],
-                ['hubot', 'So, what part of the handover would you like to work on today?'],
-                ['hubot', 'Service handover details, Service assurance, About the service,
-                           User research, Design and content, Runbook, Architecture,
-                           Security and fraud, Open-sourcing code,
-                           Service health-check monitoring and testing, Technical debt,
-                           Backend system(s) the service integrates with,
-                           Service measurement and analytics, Service operations,
-                           Outstanding items, Contacts, Sign off']
+                ['hubot', 'So, what part of the handover would you like to work on today?\n
+                           Service handover details, Service assurance\n
+                           About the service\n
+                           User research\n
+                           Design and content\n
+                           Runbook\n
+                           Architecture\n
+                           Security and fraud\n
+                           Open-sourcing code\n
+                           Service health-check monitoring and testing\n
+                           Technical debt\n
+                           Backend system(s) the service integrates with\n
+                           Service measurement and analytics\n
+                           Service operations\n
+                           Outstanding items\n
+                           Contacts\n
+                           Sign off'],
+                ['hubot', '']
             ]
             
     it 'should return the appropriate form when service handover details is selected', ->
