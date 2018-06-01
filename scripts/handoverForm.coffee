@@ -1,6 +1,13 @@
 {WebClient} = require "@slack/client"
+{createMessageAdapter} = require "@slack/interactive-messages"
 
 module.exports = (robot) ->
+
+    slackInteractions = createMessageAdapter(robot.adapter.options.token)
+
+    port = 8080
+
+    slackInteractions.start(port).then -> console.log('listening on port: ' + port)
 
     web
 
@@ -100,3 +107,5 @@ module.exports = (robot) ->
                 }
             ]
         }
+     
+    slackInteractions.action /handover/, (res) -> console.log(res)
