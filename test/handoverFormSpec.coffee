@@ -28,8 +28,8 @@ describe 'handover from journey', ->
                             "callback_id": "handover",
                             "actions": [
                                 {
-                                    "name": "games_list",
-                                    "text": "pick a section to complete",
+                                    "name": "handover_sections",
+                                    "text": "Select a topic...",
                                     "type": "select",
                                     "options": [
                                         {
