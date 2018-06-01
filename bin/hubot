@@ -6,4 +6,5 @@ npm install
 export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 export HUBOT_SLACK_TOKEN="xoxb-362690265201-363314929618-f3olaE1XVbnM9mQ0WLqK5CR9"
 export SLACK_VERIFICATION_TOKEN="xoxb-362690265201-363314929618-f3olaE1XVbnM9mQ0WLqK5CR9"
+export PORT=3000
 exec node_modules/.bin/hubot --adapter slack

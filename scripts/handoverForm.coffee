@@ -1,4 +1,13 @@
+{WebClient} = require "@slack/client"
+
 module.exports = (robot) ->
+
+    web
+
+    if robot.adapter.options != undefined
+        web = new WebClient(robot.adapter.options.token)
+    else
+        web = new WebClient()
     
     robot.hear /(handover)/i, (res) ->
         res.send {
@@ -91,7 +100,3 @@ module.exports = (robot) ->
                 }
             ]
         }
-    
-    # robot.respond /(Service Handover Details)/i, (res) ->
-    #     res.send "Service Handover Details: Service Name, Existing Digital Service Manager,
-    #     Handover date, new service or enhancement to existing?"

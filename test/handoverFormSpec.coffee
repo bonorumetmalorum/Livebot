@@ -29,7 +29,7 @@ describe 'handover from journey', ->
                             "actions": [
                                 {
                                     "name": "games_list",
-                                    "text": "Pick a game...",
+                                    "text": "pick a section to complete",
                                     "type": "select",
                                     "options": [
                                         {
@@ -108,12 +108,6 @@ describe 'handover from journey', ->
                 }]
             ]
             
-    # it 'should return the appropriate form when service handover details is selected', ->
-    #     @room.user.say('bob', 'Service handover details').then =>
-    #         expect(@room.messages).to.eql [
-    #             ['bob', 'Service handover details'],
-    #             ['hubot', 'Service Handover Details: Service Name, Existing Digital Service Manager,
-    #                         Handover date, new service or enhancement to existing?']
-    #         ]
+    
     
     
