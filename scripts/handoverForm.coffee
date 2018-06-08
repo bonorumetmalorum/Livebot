@@ -3,9 +3,9 @@
 
 module.exports = (robot) ->
 
-    slackInteractions = createMessageAdapter(robot.adapter.options.token)
+    slackInteractions = createMessageAdapter('gtT6k13RphyfG2Tu4xo9zglh')
 
-    port = 8080
+    port = 9000
 
     slackInteractions.start(port).then -> console.log('listening on port: ' + port)
 
@@ -108,4 +108,29 @@ module.exports = (robot) ->
             ]
         }
      
-    slackInteractions.action /handover/, (res) -> console.log(res)
+    slackInteractions.action 'handover', (req) ->
+        console.log(req + "\n ------------------------------ \n")
+        console.log(req.trigger_id + "\n")
+        web.dialog.open({
+            trigger_id: req.trigger_id,
+            dialog: {
+                "callback_id": "ryde-46e2b0",
+                "title": "Request a Ride",
+                "submit_label": "Request",
+                "notify_on_cancel": true,
+                "elements": [
+                                {
+                                    "type": "text",
+                                    "label": "Pickup Location",
+                                    "name": "loc_origin"
+                                },
+                                {
+                                    "type": "text",
+                                    "label": "Dropoff Location",
+                                    "name": "loc_destination"
+                                }
+                            ]
+                }
+        }).catch(
+                (error) -> console.loge("error opening dialog: " + error)
+            )

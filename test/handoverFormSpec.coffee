@@ -108,6 +108,6 @@ describe 'handover from journey', ->
                 }]
             ]
             
-    
-    
+    it '', ->
+        
     
