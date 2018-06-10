@@ -35,7 +35,7 @@ module.exports = (robot) ->
                             "options": [
                                 {
                                     "text": " Service handover details",
-                                    "value": " service handover details"
+                                    "value": "service handover details"
                                 },
                                 {
                                     "text": "Service assurance",
@@ -59,7 +59,7 @@ module.exports = (robot) ->
                                 },
                                 {
                                     "text": " Security and fraud",
-                                    "value": " scurity and fraud"
+                                    "value": "scurity and fraud"
                                 },
                                 {
                                     "text": "Open-sourcing code",
@@ -110,7 +110,27 @@ module.exports = (robot) ->
      
     slackInteractions.action 'handover', (req) ->
         console.log(req + "\n ------------------------------ \n")
-        console.log(req.trigger_id + "\n")
+        console.log(JSON.stringify(req.actions) + "\n" + req.actions[0].selected_options[0].value)
+
+        switch req.actions[0].selected_options[0].value 
+            when "service handover details" then
+            when "service assurance" then
+            when "about the service" then
+            when "user research" then
+            when "runbook" then
+            when "architecture" then
+            when "scurity and fraud" then
+            when "open-sourcing code" then
+            when "service health-check monitoring and testing" then
+            when "security and fraud" then
+            when "backend system(s) the service integrates with" then
+            when "service measurement and analytics" then
+            when "service operations" then
+            when "outstanding items" then
+            when "contacts" then
+            when "sign off" then
+        }
+
         web.dialog.open({
             trigger_id: req.trigger_id,
             dialog: {
