@@ -115,19 +115,29 @@ module.exports = (robot) ->
             trigger_id: req.trigger_id,
             dialog: {
                 "callback_id": "ryde-46e2b0",
-                "title": "Request a Ride",
+                "title": "Service Handover Details",
                 "submit_label": "Request",
                 "notify_on_cancel": true,
                 "elements": [
                                 {
                                     "type": "text",
-                                    "label": "Pickup Location",
-                                    "name": "loc_origin"
+                                    "label": "Service Handover Details",
+                                    "name": "handoverdetails"
                                 },
                                 {
                                     "type": "text",
-                                    "label": "Dropoff Location",
-                                    "name": "loc_destination"
+                                    "label": "DSM",
+                                    "name": "dsm"
+                                },
+                                {
+                                    "type": "text",
+                                    "label": "Handover Date",
+                                    "name": "date"
+                                },
+                                {
+                                    "type": "text",
+                                    "label": "new or enhancement",
+                                    "name": "new or enhance"
                                 }
                             ]
                 }
