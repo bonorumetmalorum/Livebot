@@ -63,7 +63,7 @@ module.exports = (robot) ->
                                 },
                                 {
                                     "text": " Security and fraud",
-                                    "value": "scurity and fraud"
+                                    "value": "security and fraud"
                                 },
                                 {
                                     "text": "Open-sourcing code",
@@ -490,9 +490,117 @@ module.exports = (robot) ->
                         (error) -> console.loge("error opening dialog: " + error)
                 )
 
-            # when "service measurement and analytics" then
-            # when "service operations" then
-            # when "outstanding items" then
-            # when "contacts" then
-            # when "sign off" then
+            when "service measurement and analytics"
+                web.dialog.open({
+                    trigger_id: req.trigger_id,
+                    dialog: {
+                        "callback_id": "ryde-46e2b0",
+                        "title": "Service measurement and analytics",
+                        "submit_label": "Request",
+                        "notify_on_cancel": true,
+                        "elements": [
+                                        {
+                                            "type": "textarea",
+                                            "label": "Success measures",
+                                            "name": "success_measures"
+                                        },
+                                        {
+                                            "type": "textarea",
+                                            "label": "Measurement dashboards",
+                                            "name": "measurement-dashboards"
+                                        },
+                                        {
+                                            "type": "textarea",
+                                            "label": "digital take up strategy",
+                                            "name": "strategies"
+                                        },
+                                        {
+                                            "type": "textarea",
+                                            "label": "Success measures",
+                                            "name": "success_measures"
+                                        }
+                                    ]
+                        }
+                }).catch(
+                        (error) -> console.loge("error opening dialog: " + error)
+                )
+            
+            when "service operations"
+                web.dialog.open({
+                    trigger_id: req.trigger_id,
+                    dialog: {
+                        "callback_id": "ryde-46e2b0",
+                        "title": "Service operations",
+                        "submit_label": "Request",
+                        "notify_on_cancel": true,
+                        "elements": [
+                                        {
+                                            "type": "textarea",
+                                            "label": "business readiness",
+                                            "name": "buisness_readiness"
+                                        },
+                                        {
+                                            "type": "textarea",
+                                            "label": "Customer support model",
+                                            "name": "cs_model"
+                                        },
+                                        {
+                                            "type": "textarea",
+                                            "label": "operational repoting",
+                                            "name": "opertional_reporting"
+                                        },
+                                        {
+                                            "type": "textarea",
+                                            "label": "Ongoing meetings",
+                                            "name": "meetings"
+                                        }
+                                    ]
+                        }
+                }).catch(
+                        (error) -> console.loge("error opening dialog: " + error)
+                )
+
+            when "outstanding items"
+                web.dialog.open({
+                    trigger_id: req.trigger_id,
+                    dialog: {
+                        "callback_id": "ryde-46e2b0",
+                        "title": "Outstanding items",
+                        "submit_label": "Request",
+                        "notify_on_cancel": true,
+                        "elements": [
+                                        {
+                                            "type": "textarea",
+                                            "label": "outstanding backlog",
+                                            "name": "backlog"
+                                        },
+                                        {
+                                            "type": "textarea",
+                                            "label": "Known issues",
+                                            "name": "issues"
+                                        }
+                                    ]
+                        }
+                }).catch(
+                        (error) -> console.loge("error opening dialog: " + error)
+                )
+            when "contacts"
+                web.dialog.open({
+                    trigger_id: req.trigger_id,
+                    dialog: {
+                        "callback_id": "ryde-46e2b0",
+                        "title": "Contacts",
+                        "submit_label": "Request",
+                        "notify_on_cancel": true,
+                        "elements": [
+                                        {
+                                            "type": "textarea",
+                                            "label": "Names",
+                                            "name": "buisness_readiness"
+                                        }
+                                    ]
+                        }
+                }).catch(
+                        (error) -> console.loge("error opening dialog: " + error)
+                )
             else console.log("err")
